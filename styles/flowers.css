@@ -3,31 +3,163 @@
   padding: 0;
   margin: 0;
 }
-.container{
-    max-width: 1140px;
-    margin: auto;
+.container {
+  max-width: 1140px;
+  margin: auto;
 }
-.navbar{
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 48px;
+}
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  gap: 48px;
+}
+.nav-menu ul {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 30px;
+  list-style: none;
+}
+.nav-menu ul a {
+  text-decoration: none;
+  color: #252432;
+}
+#home{
+    color: #252432;
+    font-weight: 600;
+}
+.hero-banner {
+  display: flex;
+  justify-content: space-between;
+  height: 461px;
+  margin-top: 120px;
+}
+.hero-title h1 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+.text-primary {
+  color: #e95a08;
+}
+.hero-title p {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.hero-image img {
+  width: 100%;
+  height: 355px;
+  
+}
+.our-plants{
+    
+}
+.plants-description{
+    text-align: center;
+    margin-bottom: 49px;
+}   
+
+
+.our-plants h1{
+    font-size: 3.12rem;
+    font-weight: 700;
+}
+.our-plants p{
+    color: rgba(0, 0, 0, 0.50);
+    font-size: 1.3rem;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+    row-gap: 30px;
+}
+.cards .card .card-body{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.card img{
+    width: 100%;
+    height: 322px;
+
+}
+.card .card-body h3{
+    color: #111111;
+    font-size: 1.3rem;
+    font-weight: 500;
+    align-items: center;
+
+}
+.card .card-body h4{
+    color: #111111;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.cards .card button{
+    width: 270px;
+    background: #E95A08;
+    color: white;
+    font-weight: 600;
+    padding: 19px 80px;
+    border: none;
+}
+.plants-lover{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 48px;
+    margin-top: 211px;
+
 }
-.nav-menu{
-    display: flex;
-    justify-content: space-between;
-    gap: 48px;
+.lover-left img{
+    width: 100%;
+    height: 597px;
+    gap: 60px;
+}
+.lover-right
+
+/* Mobile Responsive*/
+
+@media screen and (max-width: 576px) {
+    
+  .navbar {
+    flex-direction: column;
+    justify-content: center;
+  
+   align-items: center;
+    width: 361px;
+    height: 38px;
+    margin-top: 20px;
+    
+  }
+  .nav-menu ul {
+    visibility: hidden;
+  }
+  .hero-banner{
+    flex-direction: column;
+    align-items: center;
+  }
  
+  .hero-title h1{
+    font-size: 1.75rem;
+    width: 361px;
+    height: 66px;
+    padding-left: 10px;
+   
+  }
+  .hero-title p{
+    font-size: .75rem;
+    padding-left: 10px;
+    width: 360px;
+    height: 68px;
+    
 
-}
-.nav-menu ul{
-    display: flex;
-    justify-content: space-evenly;
-    gap: 30px;
-    list-style: none;
-
-}
-.nav-menu ul a{
-    text-decoration: none;
-    color: #252432;
+  }
+  .hero-image img{
+    width: 50%;
+    height: 245px;
+  }
 }
