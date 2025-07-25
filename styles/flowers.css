@@ -2,6 +2,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: "Noto Serif", serif;
 }
 .container {
   max-width: 1140px;
@@ -35,8 +36,9 @@
 .hero-banner {
   display: flex;
   justify-content: space-between;
-  height: 461px;
+  gap: 40px;
   margin-top: 120px;
+  
 }
 .hero-title h1 {
   font-size: 4rem;
@@ -52,8 +54,13 @@
 }
 .hero-image img {
   width: 100%;
+  height: auto;
+  max-width: 500px;
+  display: block;
+  object-fit: contain;
 }
 .our-plants {
+  margin-top: 50px;
 }
 .plants-description {
   text-align: center;
@@ -331,39 +338,52 @@ footer{
 /* Mobile Responsive*/
 
 @media screen and (max-width: 576px) {
-  .navbar {
+  .container {
+  padding: 0 15px;
+}
+.navbar {
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-    padding-left: 10px;
+    padding: 0 10px;
   }
-  .nav-menu .nav {
-    visibility: hidden;
+
+  .nav-menu ul {
+    display: none;
   }
+
+  .nav-menu {
+    justify-content: flex-end;
+    width: 100%;
+  }
+
   .nav-menu span {
-    padding-right: 20px;
+    display: block;
+    font-size: 1rem;
   }
+
   .hero-banner {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column-reverse;
+    
+    margin-top: 40px;
+    
   }
 
   .hero-title h1 {
-    font-size: 1.75rem;
-    width: 361px;
-    height: 66px;
-    padding-left: 10px;
+    font-size: 2.2rem;
   }
+
   .hero-title p {
-    font-size: 0.75rem;
-    padding-left: 10px;
-    width: 360px;
-    height: 68px;
+    font-size: 1rem;
+    padding: 0 10px;
   }
-  .hero-image img {
+
+   .hero-image img {
     width: 100%;
-    height: 245px;
+    height: auto;
+    max-height: 250px;
+    object-fit: contain;
   }
+
   .plants-description h1 {
     font-size: 1.5rem;
     margin-top: 65px;
@@ -398,6 +418,8 @@ footer{
   .plants-lover {
     flex-direction: column;
     align-items: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
   }
   .badge {
     visibility: hidden;
@@ -425,7 +447,7 @@ footer{
   }
   .latest-deals{
     grid-template-columns: 1fr;
-   
+   margin-top: 50px;
   }
   .promo-code-zabo{
     grid-row:auto;
